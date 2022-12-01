@@ -19,15 +19,14 @@ class Game
             return;
         }
         
-        if (data.x     != null) avatar.x     = data.x;
-        if (data.y     != null) avatar.y     = data.y;
-        if (data.name  != null) avatar.name  = data.name;
-        if (data.skin  != null) avatar.skin  = data.skin;
-        if (data.state != null) avatar.state = data.state;
-        if (data.emote != null)
-            avatar.emote = data.emote;
-        else
-            avatar.emote = 0;
+        if (data.x        != null) avatar.x        = data.x;
+        if (data.y        != null) avatar.y        = data.y;
+        if (data.name     != null) avatar.name     = data.name;
+        if (data.skin     != null) avatar.skin     = data.skin;
+        if (data.state    != null) avatar.state    = data.state;
+        if (data.netState != null) avatar.netState = data.netState;
+        
+        avatar.emote = data.emote != null ? data.emote : 0;
     }
     
     public function init()

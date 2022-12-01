@@ -29,6 +29,9 @@ export class Avatar extends Schema
     state: number;
     
     @type("uint8")
+    netState: number;
+    
+    @type("uint8")
     emote: number;
 }
 
